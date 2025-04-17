@@ -10,6 +10,6 @@ class PersonUserCaseImpl extends PersonUseCase {
   @override
   PersonEntity getPerson({String? email}) {
     PersonEntity personEntity = _personMapper.getPerson(email: email);
-    return PersonEntity(email: '');
+    return PersonEntity(email: personEntity.email);
   }
 }

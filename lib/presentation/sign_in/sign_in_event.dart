@@ -1,3 +1,8 @@
-abstract class Sign_inEvent {}
+abstract class SignInEvent {}
 
-class InitEvent extends Sign_inEvent {}
+class InitEvent extends SignInEvent {}
+
+class SignInTriggerEvent extends SignInEvent {
+  SignInTriggerEvent(this.email);
+  String? email;
+}

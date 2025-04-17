@@ -1,9 +1,12 @@
-class Sign_inState {
-  Sign_inState init() {
-    return Sign_inState();
-  }
+class SignInState {
+  SignInState({this.isLoggedIn, this.email});
+  bool? isLoggedIn = false;
+  String? email = '';
 
-  Sign_inState clone() {
-    return Sign_inState();
+  SignInState copyWith({bool? isLoggedIn, String? email}) {
+    return SignInState(
+      isLoggedIn: isLoggedIn ?? false,
+      email: email ?? 'test@test.com',
+    );
   }
 }
